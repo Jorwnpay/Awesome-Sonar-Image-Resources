@@ -34,6 +34,10 @@ This repo gathers open-source sonar image resources for classification, detectio
 
 **Description**: The Pengcheng Laboratory provided this underwater sonar image dataset, comprising 7600 sonar images, and made it available as scientific data. This dataset includes three categories of regular geometric structure objects (cube, ball, and cylinder) and seven other types of underwater objects (human body, metal bucket, tyre, square cage, circle cage, plane, and ROV).
 
+**4.[LSOD](https://github.com/Jelly0618/LSOD)**
+
+**Description**: This is a repo for small target sonar image detection. Full dataset will be available after their paper being accepted.  
+
 ### 3. Segmentation
 
 **1.[Forward-looking-Sonar-Segmentation-Dataset](https://github.com/XingYZhu/Forward-looking-Sonar-Segmentation-Dataset)**
