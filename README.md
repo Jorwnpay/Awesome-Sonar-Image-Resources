@@ -52,25 +52,33 @@ This repo gathers open-source sonar image resources for classification, detectio
 
 ### 1. Classification
 
-**1.[ssl-sonar-images](https://github.com/agrija9/ssl-sonar-images)**
+**1.[ZSL-SSS](https://github.com/guizilaile23/ZSL-SSS)**
 
-**Description**: This is the official repository for the `Self-supervised Learning for Sonar Image Classification` paper published at CVPR2022 workshop.
+**Description**: zero shot side scan sonar image classification code for **Applied Acoustics 2021** paper “<u>[Zero shot objects classification method of side scan sonar image based on synthesis of pseudo samples](https://www.sciencedirect.com/science/article/pii/S0003682X20307957)</u>”
 
-**2.[TGRS_BETL](https://github.com/Jorwnpay/TGRS_BETL)**
+**2.[ssl-sonar-images](https://github.com/agrija9/ssl-sonar-images)**
 
-**Description**: This repo shows the source code of IEEE TGRS 2022 article: `Sonar Images Classification While Facing Long-Tail and Few-Shot`.
+**Description**: This is the official repository for the [Self-supervised Learning for Sonar Image Classification](https://arxiv.org/abs/2204.09323) paper published at **CVPR2022 workshop**.
 
-**3.[Sonar-OLTR](https://github.com/Jorwnpay/Sonar-OLTR)**
+**3.[TGRS_BETL](https://github.com/Jorwnpay/TGRS_BETL)**
 
-**Description**: This repo contains the implementation code for the ESWA 2024 article `Open-set recognition with long-tail sonar images`.
+**Description**: This repo shows the source code of **IEEE TGRS 2022** article: [Sonar Images Classification While Facing Long-Tail and Few-Shot](https://ieeexplore.ieee.org/document/9910166).
 
-**4.[GCEANet](https://github.com/baizhongyu/GCEANet)**
+**4.[TFRN](https://github.com/guizilaile23/TFRN)**
 
-**Description**: The source code of the IEEE TIM 2024 paper `Side-Scan Sonar Image Recognition with Zero-Shot and Style Transfer`.
+**Description**: Code and data of **Remote Sensing 2023** article: [A Texture Feature Removal Network for Sonar Image Classification and Detection](https://www.mdpi.com/2072-4292/15/3/616). (Baidu Cloud link)
 
-**5.[FETL](https://github.com/baizhongyu/FETL)**
+**5.[Sonar-OLTR](https://github.com/Jorwnpay/Sonar-OLTR)**
 
-**Description**: The source code of the paper `Feature Enhancement-Based Transfer Learning for Few-Shot Sonar Image Classification.` (Not available yet).
+**Description**: This repo contains the implementation code for the **ESWA 2024** article [Open-set recognition with long-tail sonar images](https://www.sciencedirect.com/science/article/pii/S0957417424003609).
+
+**6.[GCEANet](https://github.com/baizhongyu/GCEANet)**
+
+**Description**: The source code of the **IEEE TIM 2024** paper [Side-Scan Sonar Image Classification With Zero-Shot and Style Transfer](https://ieeexplore.ieee.org/document/10399359).
+
+**7.[FETL](https://github.com/baizhongyu/FETL)**
+
+**Description**: The source code of the paper Feature Enhancement-Based Transfer Learning for Few-Shot Sonar Image Classification. (Not available yet).
 
 ### 2. Detection
 
