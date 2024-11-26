@@ -64,6 +64,14 @@ This repo gathers open-source sonar image resources for classification, detectio
 
 **Description**: This repo contains the implementation code for the ESWA 2024 article `Open-set recognition with long-tail sonar images`.
 
+**4.[GCEANet](https://github.com/baizhongyu/GCEANet)**
+
+**Description**: The source code of the IEEE TIM 2024 paper `Side-Scan Sonar Image Recognition with Zero-Shot and Style Transfer`.
+
+**5.[FETL](https://github.com/baizhongyu/FETL)**
+
+**Description**: The source code of the paper `Feature Enhancement-Based Transfer Learning for Few-Shot Sonar Image Classification.` (Not available yet).
+
 ### 2. Detection
 
 **1.[underwater-object-detection](https://github.com/zhengye1995/underwater-object-detection)**
