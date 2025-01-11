@@ -48,6 +48,12 @@ This repo gathers open-source sonar image resources for classification, detectio
 
 **Description**: The dataset consists of images obtained from a forward looking SONAR and the corresponding semantic labels for 11 classes (except background).
 
+### 4. Others
+
+**1.[OpenSonarDatasets](https://github.com/remaro-network/OpenSonarDatasets)**
+
+**Description**: A repository dedicated to consolidate open-source sonar datasets for underwater research and development. They provided a comprehensive summary of the currently available sonar datasets, which is an excellent piece of work.
+
 ## :computer:Codes
 
 ### 1. Classification
@@ -89,6 +95,3 @@ This is a repo for `Kesci underwater object detection algorithm contest`. (Readm
 **2.[autodetector](https://github.com/automlresearch/autodetector)**
 
 This is the official codes for IEEE TGRS 2021 paper `Self-trained detection detectors are implemented on small-scale Radar and Sonar detection datasets`.
-
-
-
