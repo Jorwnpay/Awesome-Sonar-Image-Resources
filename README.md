@@ -86,6 +86,9 @@ This repo gathers open-source sonar image resources for classification, detectio
 
 **Description**: The source code of the paper Feature Enhancement-Based Transfer Learning for Few-Shot Sonar Image Classification. (Not available yet).
 
+**8.[GZSL](https://github.com/JiaYP0433/CADA-Generalized-Zero-Shot-Side-Scan-Sonar-Image-Classification)**
+**Description**:  The source code of the **IEEE TIM 2025** paper CADA-SSS Generalized Zero Shot Side Scan Sonar Image Classification.
+
 ### 2. Detection
 
 **1.[underwater-object-detection](https://github.com/zhengye1995/underwater-object-detection)**
