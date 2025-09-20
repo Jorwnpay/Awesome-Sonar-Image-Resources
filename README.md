@@ -99,3 +99,7 @@ This is a repo for `Kesci underwater object detection algorithm contest`. (Readm
 **2.[autodetector](https://github.com/automlresearch/autodetector)**
 
 This is the official codes for IEEE TGRS 2021 paper `Self-trained detection detectors are implemented on small-scale Radar and Sonar detection datasets`.
+
+### 3. Low-Level Tasks
+**1.[WFC-BSN](https://github.com/xzq-2000/WFC-BSN)**
+The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Spot Network for Self-Supervised Forward Sonar Denoising".
