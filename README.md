@@ -102,4 +102,6 @@ This is the official codes for IEEE TGRS 2021 paper `Self-trained detection dete
 
 ### 3. Low-Level Tasks
 **1.[WFC-BSN](https://github.com/xzq-2000/WFC-BSN)**
+
 The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Spot Network for Self-Supervised Forward Sonar Denoising".
+
