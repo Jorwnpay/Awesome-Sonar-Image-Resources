@@ -1,6 +1,6 @@
 # Awesome Sonar Image Resources
 
-This repo gathers open-source sonar image resources for classification, detection, and segmentation. 
+This repo gathers open-source sonar image resources for classification, detection, and segmentation. Update weekly!
 
 > :mega:More open resources links are welcome:smiley:. Let's build a better open-source environment for sonar image recognition community together!:heart:Please feel free to contribute!
 
