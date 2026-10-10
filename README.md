@@ -1,6 +1,6 @@
 # Awesome Sonar Image Resources
 
-This repo gathers open-source sonar image resources for classification, detection, and segmentation. Update weekly!
+This repo gathers public datasets and code for sonar image perception, sonar-language alignment, sonar-optical multimodal learning, vision-language models (VLMs), image generation, and embodied agents. Emerging world-model research and pending releases are tracked separately. Update weekly!
 
 > :mega:More open resources links are welcome:smiley:. Let's build a better open-source environment for sonar image recognition community together!:heart:Please feel free to contribute!
 
@@ -46,10 +46,6 @@ This repo gathers open-source sonar image resources for classification, detectio
 
 **Description**: A side-scan sonar dataset for underwater wall detection, collected by an autonomous underwater vehicle carrying a Klein 3500 sonar. It provides 216 original images, 864 images after augmentation, COCO annotations, and 6243 annotated video frames. The release also includes SWDD-Validation and SWDD-Adversarial for robustness studies.
 
-**6.[SubPipe](https://zenodo.org/records/12666132)**
-
-**Description**: A multimodal underwater pipeline inspection dataset with side-scan sonar, RGB cameras, and navigation sensors. The sonar images have pipeline detection bounding boxes; the segmentation annotations belong to the RGB images. The SubPipeMini2 download focuses on the side-scan sonar detection data.
-
 ### 3. Segmentation
 
 **1.[Forward-looking-Sonar-Segmentation-Dataset](https://github.com/XingYZhu/Forward-looking-Sonar-Segmentation-Dataset)**
@@ -68,7 +64,37 @@ This repo gathers open-source sonar image resources for classification, detectio
 
 **Description**: Three annotated sonar image subsets for drowned-victim segmentation: SDVD, CleanedSDVD, and ExtendedSDVD. They contain 256x256 grayscale images and binary masks, collected using a submerged metal effigy to simulate a human figure. A versioned archive is available on [Zenodo](https://zenodo.org/records/18268201).
 
-### 4. Others
+### 4. Sonar-Language Alignment and VLMs
+
+**1.[OceanInstruction: Sonar-Open](https://huggingface.co/datasets/zjunlp/OceanInstruction/tree/main/Sonar-Open)**
+
+**Description**: The sonar subset of the [OceanPile](https://arxiv.org/abs/2605.00877) instruction-tuning corpus, with 26,356 image-text instructions reported in the dataset card. It releases instruction/response tables and associated sonar images for target recognition and visual question answering, including Chinese and English examples. The wider corpus also contains optical and text-only subsets; this entry covers Sonar-Open. The 400-row preview on the main dataset page is a separate mixed example file.
+
+### 5. Sonar-Optical Multimodal Perception
+
+**1.[UXO Acoustic-Optical Dataset](https://zenodo.org/records/13778485)**
+
+**Description**: Real underwater recordings with an ARIS 3000 imaging sonar and a GoPro camera, covering nearly 100 trajectories and over 74,000 frames of three unexploded-ordnance targets. Most sonar frames have matched optical frames; the release includes camera annotations, calibration, target-relative poses, and 3D models for cross-modal perception and reconstruction. Pairing uses motion-based temporal alignment rather than hardware-synchronized camera timestamps.
+
+**2.[UMOD](https://github.com/UM-Research-Ng/UMOD-dataset)**
+
+**Description**: A real underwater vision-sonar dataset collected by an ROV equipped with a BlueView M900 sonar and a ZED2 camera. It covers nine static and dynamic targets for cross-modal detection, tracking, and feature matching. The repository provides a demo and a Baidu Netdisk download link with an extraction code; visual and sonar images and labels are organized separately.
+
+**3.[OA-Stereo: DAVE Sonar Dataset](https://huggingface.co/datasets/c237814486/dave_sonar)**
+
+**Description**: A simulated opti-acoustic dataset generated with the DAVE underwater robotics platform for self-supervised stereo, dense depth estimation, and 3D reconstruction. Four scenes provide synchronized stereo RGB images, forward-looking sonar images, camera/sonar calibration, and depth or disparity maps. This public release is simulation data; the accompanying method also reports real-world experiments.
+
+**4.[SubPipe](https://zenodo.org/records/12666132)**
+
+**Description**: A real multimodal underwater pipeline inspection dataset with side-scan sonar, RGB cameras, and navigation sensors. The sonar images have pipeline detection bounding boxes; the segmentation annotations belong to the RGB images. The SubPipeMini2 download focuses on the side-scan sonar detection data. It supports studying complementary acoustic and optical observations, with modality-specific annotations.
+
+### 6. Embodied Agent Benchmarks
+
+**1.[OceanGym Benchmark Data](https://huggingface.co/datasets/zjunlp/OceanGym)**
+
+**Description**: Released data and assets for a simulated underwater embodied-agent benchmark. Its perception tasks combine camera views, imaging sonar, and language-based evaluation under different lighting and context settings. The release also contains agent decision outputs and logs. This is a simulation benchmark for VLM perception and agent evaluation, rather than a real-world robot trajectory dataset.
+
+### 7. Others
 
 **1.[OpenSonarDatasets](https://github.com/remaro-network/OpenSonarDatasets)**
 
@@ -142,3 +168,49 @@ The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Sp
 **2.[ai4shipwrecks-scripts](https://github.com/umfieldrobotics/ai4shipwrecks-scripts)**
 
 **Description**: Official helper scripts for the AI4Shipwrecks segmentation dataset. They provide a PyTorch dataset loader and generate overlapping square crops from full-sized sonar images and their corresponding segmentation masks.
+
+### 5. Multimodal Perception and Data Processing
+
+**1.[OA-Stereo](https://github.com/c237814486/OA-Stereo)**
+
+**Description**: The official **IEEE RA-L 2025** implementation of self-supervised opti-acoustic stereo for dense underwater depth estimation. It fuses calibrated optical and sonar observations and uses reconstructed-sonar consistency for supervision. The repository provides network and loss implementations, training, validation, visualization, and a link to its simulated DAVE dataset.
+
+**2.[uxo-dataset2024](https://github.com/dfki-ric/uxo-dataset2024)**
+
+**Description**: Official preparation and viewing utilities for the UXO acoustic-optical dataset. They extract ARIS sonar frames, generate polar images, align sonar and camera recordings using motion, process trajectories, and export paired records. The release includes calibration files and a viewer for stepping through matched observations.
+
+**3.[SeafloorAI Data Processing](https://github.com/deep-real/SeafloorAI)**
+
+**Description**: Public preprocessing code accompanying **NeurIPS 2024 Datasets and Benchmarks** SeafloorAI and its sonar-language extension SeafloorGenAI. It reprojects, resamples, merges, and patchifies sonar backscatter and bathymetry surveys, with slope and rugosity utilities. The currently verified release is preprocessing code; the full image-text dataset and VLM training implementation are not provided by this repository.
+
+### 6. Vision-Language Models and Embodied Agents
+
+**1.[OceanGym](https://github.com/OceanGPT/OceanGym)**
+
+**Description**: An open underwater simulation and evaluation environment for embodied agents. It provides VLM perception evaluation with camera-only, camera-plus-sonar, and sonar-example prompting settings, alongside language-driven decision tasks and agent execution code. The repository includes sensor data collection scripts and links to benchmark data. Its simulator supports acoustic and optical inputs; it is not a learned world model.
+
+### 7. Text-to-Sonar Generation
+
+**1.[Synth-SONAR](https://github.com/Purushothaman-natarajan/Synth-SONAR)**
+
+**Description**: Public code for text-conditioned sonar image synthesis using diffusion models, style injection, and LoRA fine-tuning. It includes image-caption metadata preparation, language-model caption generation, a VLM captioning script, and style clustering. This resource supports sonar-language data preparation and generative augmentation; the repository does not establish a released sonar-language retrieval benchmark.
+
+## :hourglass_flowing_sand:Emerging Research and Release Tracking
+
+These entries have public papers or partial releases, but their complete datasets or model implementations were not verified as publicly downloadable on 2026-10-10. Release status is checked during weekly maintenance.
+
+### 1. Sonar-Language Datasets and VLMs
+
+**1.[SeafloorGenAI / SeafloorAI](https://arxiv.org/abs/2411.00172)**
+
+**Description**: A sonar-language seafloor mapping resource reporting 696K sonar images, 696K descriptions, and approximately 7M question-answer pairs. Language annotations are generated with GPT-4 using marine-scientist examples and geological attributes. The official repository currently states that hosting its 400GB dataset is pending and provides preprocessing code instead; a complete image-text download was not verified. See the released preprocessing resource under Codes.
+
+**2.[SonarLLM / SonarBench](https://arxiv.org/abs/2608.24325)**
+
+**Description**: A 2026 preprint on a native sonar-optical multimodal large language model and a paired benchmark for recognition, counting, visual question answering, and captioning. It studies sonar-only, optical-only, and fused inputs under controlled optical degradation. The paper is public; an official code, weights, or benchmark download was not verified as of the date above.
+
+### 2. World Models
+
+**1.[AquaJEPA](https://arxiv.org/abs/2607.29393)**
+
+**Description**: A 2026 preprint on action-conditioned predictive representations combining RGB, forward-looking sonar, proprioception, and thruster commands for underwater robot dynamics and planning. It studies future latent prediction and sensor dropout in Stonefish simulation, including camera-only and sonar-only variants. The paper is public; an official code, weights, or training-data download was not verified as of the date above. Reported validation is simulated.
