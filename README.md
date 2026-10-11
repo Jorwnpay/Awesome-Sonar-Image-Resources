@@ -1,6 +1,6 @@
 # Awesome Sonar Image Resources
 
-This repo gathers public datasets and code for sonar image perception, sonar-language alignment, sonar-optical multimodal learning, vision-language models (VLMs), image generation, and embodied agents. Emerging world-model research and pending releases are tracked separately. Update weekly!
+This repo gathers public datasets and code for sonar image perception, sonar-language alignment, sonar-optical multimodal learning, vision-language models (VLMs), image generation, 3D reconstruction, and embodied agents. Emerging world-model research and pending releases are tracked separately. Update weekly!
 
 > :mega:More open resources links are welcome:smiley:. Let's build a better open-source environment for sonar image recognition community together!:heart:Please feel free to contribute!
 
@@ -64,6 +64,10 @@ This repo gathers public datasets and code for sonar image perception, sonar-lan
 
 **Description**: Three annotated sonar image subsets for drowned-victim segmentation: SDVD, CleanedSDVD, and ExtendedSDVD. They contain 256x256 grayscale images and binary masks, collected using a submerged metal effigy to simulate a human figure. A versioned archive is available on [Zenodo](https://zenodo.org/records/18268201).
 
+**5.[Confined-MSIS](https://github.com/NGC4MR-YJ/Confined-MSIS)**
+
+**Description**: A mechanically scanning imaging sonar dataset collected in confined underwater environments, with raw ping records from seven positions, rendered angle-range and polar images, and paired segmentation labels. The repository directly hosts data and segmentation ZIP archives, experimental setup documentation, and MATLAB rendering utilities. This is acquired sonar data and its image representations, rather than a simulated image corpus.
+
 ### 4. Sonar-Language Alignment and VLMs
 
 **1.[OceanInstruction: Sonar-Open](https://huggingface.co/datasets/zjunlp/OceanInstruction/tree/main/Sonar-Open)**
@@ -94,7 +98,13 @@ This repo gathers public datasets and code for sonar image perception, sonar-lan
 
 **Description**: Released data and assets for a simulated underwater embodied-agent benchmark. Its perception tasks combine camera views, imaging sonar, and language-based evaluation under different lighting and context settings. The release also contains agent decision outputs and logs. This is a simulation benchmark for VLM perception and agent evaluation, rather than a real-world robot trajectory dataset.
 
-### 7. Others
+### 7. Synthetic Data and Generative Augmentation
+
+**1.[Synthetic Side-Scan Sonar FLUX+LoRA](https://www.kaggle.com/datasets/yangyuanxu/sonar-flux-synthetic)**
+
+**Description**: A generated side-scan sonar detection dataset with 2,380 images and YOLO-format labels, covering body, plane, and ship targets. The [author repository](https://github.com/yanzhi0526/sonar-flux-lora-augmentation) documents 1,780 automatically screened images and a 600-image manually annotated subset, with file manifests and generation/screening metadata. All images in this release are synthetic; the original real sonar images and FLUX/LoRA weights are not redistributed. Data reuse follows the stated CC BY-NC-SA 4.0 terms.
+
+### 8. Others
 
 **1.[OpenSonarDatasets](https://github.com/remaro-network/OpenSonarDatasets)**
 
@@ -194,6 +204,16 @@ The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Sp
 **1.[Synth-SONAR](https://github.com/Purushothaman-natarajan/Synth-SONAR)**
 
 **Description**: Public code for text-conditioned sonar image synthesis using diffusion models, style injection, and LoRA fine-tuning. It includes image-caption metadata preparation, language-model caption generation, a VLM captioning script, and style clustering. This resource supports sonar-language data preparation and generative augmentation; the repository does not establish a released sonar-language retrieval benchmark.
+
+**2.[sonar-flux-lora-augmentation](https://github.com/yanzhi0526/sonar-flux-lora-augmentation)**
+
+**Description**: Public reproduction assets for [Diffusion-Model-Based Data Augmentation for Target Detection in Side-Scan Sonar Images](https://www.mdpi.com/2072-4292/18/13/2193). They include YOLO configuration templates, prompt templates, label auditing and quality-screening utilities, evaluation scripts, and result tables. The synthetic image release is listed under Datasets; this repository does not redistribute the real source images or FLUX/LoRA checkpoints, so it is not a complete pretrained generator release.
+
+### 8. 3D Reconstruction and Novel View Synthesis
+
+**1.[SonarSplat](https://github.com/umfieldrobotics/sonar_splat)**
+
+**Description**: The official **IEEE RA-L 2025** code for [SonarSplat: Novel View Synthesis of Imaging Sonar via Gaussian Splatting](https://arxiv.org/abs/2504.00159). It represents acoustic scenes with 3D Gaussians and provides imaging-sonar rasterization, training, image evaluation, mesh export, and reconstruction evaluation. The [project page](https://umfieldrobotics.github.io/sonarsplat3D/) links real sonar sequences with sensor poses and selected ground-truth meshes. This is scene reconstruction and rendering, rather than a learned action-conditioned world model.
 
 ## :hourglass_flowing_sand:Emerging Research and Release Tracking
 
