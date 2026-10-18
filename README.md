@@ -92,6 +92,14 @@ This repo gathers public datasets and code for sonar image perception, sonar-lan
 
 **Description**: A real multimodal underwater pipeline inspection dataset with side-scan sonar, RGB cameras, and navigation sensors. The sonar images have pipeline detection bounding boxes; the segmentation annotations belong to the RGB images. The SubPipeMini2 download focuses on the side-scan sonar detection data. It supports studying complementary acoustic and optical observations, with modality-specific annotations.
 
+**5.[AONeuS Demo Data](https://github.com/kzhang2/aoneus/tree/main/data)**
+
+**Description**: A small synthetic acoustic-optical example bundled with the AONeuS reconstruction implementation. It provides RGB images, imaging-sonar observations, and camera/sonar configuration files for a simulated turtle scene. This is a public demonstration subset for testing multimodal neural surface reconstruction, rather than a complete real-world survey dataset. The corresponding implementation is listed under 3D Reconstruction and Novel View Synthesis.
+
+**6.[SonarSweep Simulation Dataset](https://huggingface.co/datasets/Lingpenghaha/Sonarsweep_dataset)**
+
+**Description**: Released simulated camera and forward-looking sonar observations for dense depth estimation and 3D reconstruction with SonarSweep. The [author repository](https://github.com/LIAS-CUHKSZ/SonarSweep) reports more than 7,000 data points and trajectory-based training, validation, and test splits. Public samples include stereo camera images, sonar frames, depth arrays, and calibration files; the hosting also includes a test manifest and OceanSim scene assets. This entry covers the simulation release; the authors describe further real-world data collection as ongoing.
+
 ### 6. Embodied Agent Benchmarks
 
 **1.[OceanGym Benchmark Data](https://huggingface.co/datasets/zjunlp/OceanGym)**
@@ -215,9 +223,17 @@ The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Sp
 
 **Description**: The official **IEEE RA-L 2025** code for [SonarSplat: Novel View Synthesis of Imaging Sonar via Gaussian Splatting](https://arxiv.org/abs/2504.00159). It represents acoustic scenes with 3D Gaussians and provides imaging-sonar rasterization, training, image evaluation, mesh export, and reconstruction evaluation. The [project page](https://umfieldrobotics.github.io/sonarsplat3D/) links real sonar sequences with sensor poses and selected ground-truth meshes. This is scene reconstruction and rendering, rather than a learned action-conditioned world model.
 
+**2.[AONeuS](https://github.com/kzhang2/aoneus)**
+
+**Description**: The official **ACM SIGGRAPH 2024** implementation of [AONeuS: A Neural Rendering Framework for Acoustic-Optical Sensor Fusion](https://doi.org/10.1145/3641519.3657446). It combines optical and imaging-sonar measurements through neural implicit surfaces and sensor-specific rendering. The repository includes model, rendering, data-loading, and reconstruction code, configurations, and a runnable example with synthetic turtle observations; the bundled data are a demonstration subset.
+
+**3.[SonarSweep](https://github.com/LIAS-CUHKSZ/SonarSweep)**
+
+**Description**: Public code for [SonarSweep: Fusing Sonar and Vision for Robust 3D Reconstruction via Plane Sweeping](https://arxiv.org/abs/2511.00392). It matches camera and forward-looking sonar features in a differentiable plane-sweep cost volume to estimate dense metric depth. The repository includes training/testing scripts, network and geometric-warping implementations, a pretrained checkpoint, visualization utilities, and download helpers for its simulated dataset. The paper reports real-world experiments, while the verified public dataset is simulated.
+
 ## :hourglass_flowing_sand:Emerging Research and Release Tracking
 
-These entries have public papers or partial releases, but their complete datasets or model implementations were not verified as publicly downloadable on 2026-10-10. Release status is checked during weekly maintenance.
+These entries have public papers or partial releases, but their complete datasets or model implementations were not verified as publicly downloadable on 2026-10-18. Release status is checked during weekly maintenance.
 
 ### 1. Sonar-Language Datasets and VLMs
 
@@ -229,7 +245,13 @@ These entries have public papers or partial releases, but their complete dataset
 
 **Description**: A 2026 preprint on a native sonar-optical multimodal large language model and a paired benchmark for recognition, counting, visual question answering, and captioning. It studies sonar-only, optical-only, and fused inputs under controlled optical degradation. The paper is public; an official code, weights, or benchmark download was not verified as of the date above.
 
-### 2. World Models
+### 2. Sonar-Optical Datasets
+
+**1.[uScenes](https://arxiv.org/abs/2608.27795)**
+
+**Description**: A 2026 preprint describing real field recordings pairing RGB images with 3D multibeam imaging-sonar point clouds. The paper reports 110 scenes and 95,834 observation pairs; temporal association uses nearest timestamps with an 83 ms tolerance, rather than hardware synchronization. The acoustic representation is 3D returns rather than conventional 2D sonar images. The [repository linked by the authors](https://github.com/era-research-lab/uScenes) was empty when checked on 2026-10-18, so a usable code or dataset release was not verified.
+
+### 3. World Models
 
 **1.[AquaJEPA](https://arxiv.org/abs/2607.29393)**
 
