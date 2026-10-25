@@ -100,6 +100,10 @@ This repo gathers public datasets and code for sonar image perception, sonar-lan
 
 **Description**: Released simulated camera and forward-looking sonar observations for dense depth estimation and 3D reconstruction with SonarSweep. The [author repository](https://github.com/LIAS-CUHKSZ/SonarSweep) reports more than 7,000 data points and trajectory-based training, validation, and test splits. Public samples include stereo camera images, sonar frames, depth arrays, and calibration files; the hosting also includes a test manifest and OceanSim scene assets. This entry covers the simulation release; the authors describe further real-world data collection as ongoing.
 
+**7.[HODOR](https://doi.pangaea.de/10.1594/PANGAEA.980000)**
+
+**Description**: Real, synchronized forward-looking imaging-sonar and stereo-camera recordings from a stationary underwater fish observatory in the Baltic Sea. The [project](https://github.com/TAWilts/HODOR) reports 5,850 sequences and about 430 hours per sensor, with timestamps, environmental measurements, and species-activity counts. PANGAEA provides metadata and links to video files; bulk video archives require registration according to the authors. Machine-learning-based annotations are still announced as forthcoming, and the metadata activity counts differ from the publication's sonar-extrapolated species estimates.
+
 ### 6. Embodied Agent Benchmarks
 
 **1.[OceanGym Benchmark Data](https://huggingface.co/datasets/zjunlp/OceanGym)**
@@ -201,6 +205,10 @@ The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Sp
 
 **Description**: Public preprocessing code accompanying **NeurIPS 2024 Datasets and Benchmarks** SeafloorAI and its sonar-language extension SeafloorGenAI. It reprojects, resamples, merges, and patchifies sonar backscatter and bathymetry surveys, with slope and rugosity utilities. The currently verified release is preprocessing code; the full image-text dataset and VLM training implementation are not provided by this repository.
 
+**4.[hodor-python](https://github.com/gboeer/hodor_python)**
+
+**Description**: The Python data-access package linked by the HODOR authors. It loads sequence metadata and activity counts into pandas, filters sequences by species activity, and provides targeted downloads of paired stereo-camera and sonar videos. The repository includes package source and a command-line interface; it is a data-access and analysis utility rather than a pretrained perception model. See the HODOR entry under Datasets for data-access conditions and annotation limits.
+
 ### 6. Vision-Language Models and Embodied Agents
 
 **1.[OceanGym](https://github.com/OceanGPT/OceanGym)**
@@ -233,7 +241,7 @@ The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Sp
 
 ## :hourglass_flowing_sand:Emerging Research and Release Tracking
 
-These entries have public papers or partial releases, but their complete datasets or model implementations were not verified as publicly downloadable on 2026-10-18. Release status is checked during weekly maintenance.
+These entries have public papers or partial releases, but their complete datasets or model implementations were not verified as publicly downloadable on 2026-10-25. Release status is checked during weekly maintenance.
 
 ### 1. Sonar-Language Datasets and VLMs
 
@@ -250,6 +258,10 @@ These entries have public papers or partial releases, but their complete dataset
 **1.[uScenes](https://arxiv.org/abs/2608.27795)**
 
 **Description**: A 2026 preprint describing real field recordings pairing RGB images with 3D multibeam imaging-sonar point clouds. The paper reports 110 scenes and 95,834 observation pairs; temporal association uses nearest timestamps with an 83 ms tolerance, rather than hardware synchronization. The acoustic representation is 3D returns rather than conventional 2D sonar images. The [repository linked by the authors](https://github.com/era-research-lab/uScenes) was empty when checked on 2026-10-18, so a usable code or dataset release was not verified.
+
+**2.[RSFusion / RSFusionDet](https://arxiv.org/abs/2608.25367)**
+
+**Description**: A 2026 preprint on RGB-sonar object detection and cross-modal object matching. It reports tank recordings from an Oculus MD750d imaging sonar and an optical camera, with 5,658 training and 1,415 validation image pairs spanning seven target classes, lighting conditions, and sonar range settings. The detector uses cross-attention for spatially misaligned features and an object-matching head. The [author-linked repository](https://github.com/LEFTeyex/RSFusionDet) was empty when checked on 2026-10-25, so the paper's claimed public code/data release was not verified.
 
 ### 3. World Models
 
