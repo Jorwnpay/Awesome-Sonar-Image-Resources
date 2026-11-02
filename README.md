@@ -104,6 +104,14 @@ This repo gathers public datasets and code for sonar image perception, sonar-lan
 
 **Description**: Real, synchronized forward-looking imaging-sonar and stereo-camera recordings from a stationary underwater fish observatory in the Baltic Sea. The [project](https://github.com/TAWilts/HODOR) reports 5,850 sequences and about 430 hours per sensor, with timestamps, environmental measurements, and species-activity counts. PANGAEA provides metadata and links to video files; bulk video archives require registration according to the authors. Machine-learning-based annotations are still announced as forthcoming, and the metadata activity counts differ from the publication's sonar-extrapolated species estimates.
 
+**8.[HaCKRS: Huntington and Caltech Koi RGB and Sonar](https://huggingface.co/datasets/perona-lab/Huntington_and_Caltech_Koi_RGB_and_Sonar)**
+
+**Description**: Real Garmin LiveScope imaging-sonar recordings paired with top-down RGB video of koi carp. The [2026 preprint](https://arxiv.org/abs/2610.23759) reports over 105,000 matched frame pairs, about 3.3 hours, and four range/orientation configurations. The MIT-licensed release includes polar/Cartesian sonar images, RGB images, timing metadata, and planar mappings for the three horizontal configurations. Pairing uses corrected device timestamps and visible synchronization events, not a shared hardware trigger; planar mappings do not recover 3D fish positions. Fish detections, identities, tracks, and count labels are not provided.
+
+**9.[SOVIS](https://huggingface.co/datasets/weitung1121/SOVIS)**
+
+**Description**: Real Blueye X3 camera and Oculus M750d imaging-sonar recordings from 17 dives at six Trondheimfjord sites. The current release documents 69,481 pairs and 106,059 raw pings; the [2026 paper](https://arxiv.org/abs/2606.01398) reports over 76,000 pairs. Post-hoc clock-offset correction and nearest-ping matching within 0.1 s replace hardware synchronization, with per-frame synchronization-quality flags. A labeled subset contains 706 camera fish boxes, 306 matched sonar boxes, and 127 tracks. Images, raw-ping tables, calibration, and labels are public under CC BY-SA 4.0. The fish-test dive overlaps the general frame-training split and must be excluded from pretraining when evaluating that fish test.
+
 ### 6. Embodied Agent Benchmarks
 
 **1.[OceanGym Benchmark Data](https://huggingface.co/datasets/zjunlp/OceanGym)**
@@ -115,6 +123,10 @@ This repo gathers public datasets and code for sonar image perception, sonar-lan
 **1.[Synthetic Side-Scan Sonar FLUX+LoRA](https://www.kaggle.com/datasets/yangyuanxu/sonar-flux-synthetic)**
 
 **Description**: A generated side-scan sonar detection dataset with 2,380 images and YOLO-format labels, covering body, plane, and ship targets. The [author repository](https://github.com/yanzhi0526/sonar-flux-lora-augmentation) documents 1,780 automatically screened images and a 600-image manually annotated subset, with file manifests and generation/screening metadata. All images in this release are synthetic; the original real sonar images and FLUX/LoRA weights are not redistributed. Data reuse follows the stated CC BY-NC-SA 4.0 terms.
+
+**2.[ApertureLab Synthetic SAS Dataset v1.1](https://huggingface.co/datasets/idg101/Aperture_Lab_Synthetic_Aperture_Sonar_v1_1)**
+
+**Description**: A physics-simulated synthetic-aperture-sonar dataset with 1,000 georeferenced swaths, split 800/100/100 for training/validation/testing. Each 200 m by 80 m swath has 2.5 cm pixels, COCO footprint and shadow polygons, a terrain height map, boulder tables, and a scene description. The [author documentation](https://gergltd.com/aperturelab/dataset-v1-1.html) distinguishes four target classes from 23 used clutter classes and describes acquisition variation. This is simulation data, with no field measurements, optical pairs, or language labels. Its custom [ALSD-1.0 license](https://huggingface.co/datasets/idg101/Aperture_Lab_Synthetic_Aperture_Sonar_v1_1/blob/main/LICENSE.md) includes named-party exclusions and redistribution conditions.
 
 ### 8. Others
 
@@ -208,6 +220,14 @@ The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Sp
 **4.[hodor-python](https://github.com/gboeer/hodor_python)**
 
 **Description**: The Python data-access package linked by the HODOR authors. It loads sequence metadata and activity counts into pandas, filters sequences by species activity, and provides targeted downloads of paired stereo-camera and sonar videos. The repository includes package source and a command-line interface; it is a data-access and analysis utility rather than a pretrained perception model. See the HODOR entry under Datasets for data-access conditions and annotation limits.
+
+**5.[HaCKRS Companion Tools](https://github.com/fisheye-sonar/Huntington-and-Caltech-Koi-RGB-and-Sonar-Dataset)**
+
+**Description**: Official MIT-licensed tools for loading released HaCKRS RGB-sonar pairs, resolving partitioned image paths, transforming sonar geometry, applying saved sonar-to-RGB homographies, and reproducing synchronization/calibration. The repository includes timing parameters, geometry implementations, a selective downloader, and validation scripts. These are dataset utilities, not a trained fish detector; see the dataset entry for annotation and alignment limits.
+
+**6.[SOVIS Data Utilities](https://github.com/weitung/sovis-dataset)**
+
+**Description**: Public data-access and visualization helpers for SOVIS, with sensor calibration and per-dive synchronization metadata. The MIT-licensed code decodes raw Oculus messages, renders sonar fans, converts polar observations to a fixed metric grid, batches variable sonar settings, and displays camera-sonar samples. The repository supplies utilities and calibration rather than pretrained SOVISFishNet weights; the paired images and raw pings are hosted separately on Hugging Face.
 
 ### 6. Vision-Language Models and Embodied Agents
 
