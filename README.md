@@ -112,6 +112,10 @@ This repo gathers public datasets and code for sonar image perception, sonar-lan
 
 **Description**: Real Blueye X3 camera and Oculus M750d imaging-sonar recordings from 17 dives at six Trondheimfjord sites. The current release documents 69,481 pairs and 106,059 raw pings; the [2026 paper](https://arxiv.org/abs/2606.01398) reports over 76,000 pairs. Post-hoc clock-offset correction and nearest-ping matching within 0.1 s replace hardware synchronization, with per-frame synchronization-quality flags. A labeled subset contains 706 camera fish boxes, 306 matched sonar boxes, and 127 tracks. Images, raw-ping tables, calibration, and labels are public under CC BY-SA 4.0. The fish-test dive overlaps the general frame-training split and must be excluded from pretraining when evaluating that fish test.
 
+**10.[MAOUD](https://zenodo.org/records/18824645)**
+
+**Description**: Real acoustic, optical, and laser sensor acquisition in controlled experimental tank scenes, using an Oculus imaging sonar, a camera, and a laser scanner. The [Scientific Data 2026 paper](https://doi.org/10.1038/s41597-026-07116-3) reports 7,200 RGB images, 2,400 acoustic images, 24 point-cloud sets, and 24 acoustic videos. It documents factory calibration, synchronized image/point-cloud acquisition, and cross-modal transforms; a one-to-one RGB-sonar frame-pair manifest was not verified. The CC BY 4.0 release lists separate acoustic and optical archives for two scenes and a tools archive. Counts refer to modality-specific records rather than paired frames.
+
 ### 6. Embodied Agent Benchmarks
 
 **1.[OceanGym Benchmark Data](https://huggingface.co/datasets/zjunlp/OceanGym)**
@@ -258,6 +262,10 @@ The code of EAAI 2025 article "WFC-BSN:Wavelet Fusion-Based Conditional Blind-Sp
 **3.[SonarSweep](https://github.com/LIAS-CUHKSZ/SonarSweep)**
 
 **Description**: Public code for [SonarSweep: Fusing Sonar and Vision for Robust 3D Reconstruction via Plane Sweeping](https://arxiv.org/abs/2511.00392). It matches camera and forward-looking sonar features in a differentiable plane-sweep cost volume to estimate dense metric depth. The repository includes training/testing scripts, network and geometric-warping implementations, a pretrained checkpoint, visualization utilities, and download helpers for its simulated dataset. The paper reports real-world experiments, while the verified public dataset is simulated.
+
+**4.[sonar-inverse-rendering](https://github.com/SevanBrodjian/sonar-inverse-rendering)**
+
+**Description**: Official **CVPR 2026 PBVS Workshop** code for [Single View Seafloor Recovery from Imaging Sonar via Differentiable Rendering](https://arxiv.org/abs/2605.24195). It fits an explicit seafloor height field to one forward-looking sonar image through differentiable acoustic ray tracing, without training the reconstruction method. The paper conditions recovery on known seafloor tilt and identifies the single-view geometric ambiguity. The repository provides the PyTorch renderer, synthetic-data generation, ARIS examples, evaluation scripts, and a supervised BathCNN baseline. It links separate data/checkpoint archives whose contents were not verified; this is reconstruction code rather than an action-conditioned world model.
 
 ## :hourglass_flowing_sand:Emerging Research and Release Tracking
 
